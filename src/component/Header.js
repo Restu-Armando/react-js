@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Import Logo
-const logoUrl = process.env.PUBLIC_URL + "asset/images/logo.png";
+const logoUrl = process.env.PUBLIC_URL + "asset/image/name.png";
 
 const Header = () => {
   return (
@@ -15,7 +16,22 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/service">Service</Link>
+              </li>
+              <li>
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/my-resume">Resume</Link>
+              </li>
+              <li>
+                <Link to="/booking">Book Appointment</Link>
               </li>
             </ul>
           </nav>

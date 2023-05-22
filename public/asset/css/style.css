@@ -12,9 +12,15 @@ body {
   font-familyl: "Poppins", sans-serif;
 }
 
+/* ==========Header Section========== */
 .header {
   padding: 15px 0;
   background: #fff;
   box-sizing: border-box;
   box-shadow: 0 5px 15px -10px #000;
+}
+
+/* ==========Footer Section========== */
+.footer {
+  padding: 300px 0;
 }

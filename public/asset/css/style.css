@@ -9,16 +9,346 @@ body {
   background: #fff;
   color: #000;
   font-size: 14px;
-  font-familyl: "Poppins", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 /* ==========Header Section========== */
 .header {
+  position: relative;
   padding: 15px 0;
   background: #fff;
   box-sizing: border-box;
   box-shadow: 0 5px 15px -10px #000;
+  z-index: 999;
 }
+
+.header__logo {
+  padding-top: 18px;
+}
+
+.header__nav ul {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.header__nav ul li {
+  display: inline-block;
+}
+
+.header__nav ul li a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  padding: 0;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  font-weight: 600;
+  transition: all linear 0.3s;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.header__nav ul li a:hover {
+  color: #025464;
+}
+.header__nav ul li:last-child a {
+  margin: 0;
+  margin-left: 50px;
+  padding: 15px 30px;
+  background-image: linear-gradient(to left bottom, #e0857b, #e68d76, #ea9571, #ec9e6d, #eca869);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header__nav ul li:last-child a:hover {
+  box-shadow: 0 5px 15px -10px #000;
+  transform: translateY(-5px);
+}
+
+.header__nav ul li:last-child a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: #303a56;
+  z-index: -1;
+  transition: all linear 0.3s;
+}
+
+.header__nav ul li:last-child a:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+/* ==========Title Section========== */
+.section__heading h4 {
+  color: #025464;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section__heading h2 {
+  color: #000;
+  font-size: 70px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.section__heading h2 span {
+  display: block;
+  color: #025464;
+}
+
+.section__heading h2 .color-red {
+  color: #025464;
+}
+
+.section__heading p {
+  color: #333;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 25px 0;
+}
+
+.section__heading a {
+  position: relative;
+  display: inline-block;
+  padding: 13px 30px 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(to left bottom, #e0857b, #e68d76, #ea9571, #ec9e6d, #eca869);
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 1;
+  overflow: hidden;
+  transition: all linear 0.3s;
+}
+
+.section__heading a:hover {
+  box-shadow: 0 5px 15px -10px #000;
+  transform: translateY(-5px);
+}
+
+.section__heading a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: #303a56;
+  z-index: -1;
+  transition: all linear 0.3s;
+}
+
+.section__heading a:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+/* ==========Banner Section========== */
+
+.banner {
+  padding: 30px 0;
+  background: #fbf9f9;
+}
+
+.banner__content {
+  padding: 70px 0;
+}
+
+.banner__thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========Profile Section========== */
+.profile {
+  padding: 80px 0;
+  background: white;
+}
+
+.profile__thumbnail {
+  position: relative;
+  padding-right: 100px;
+}
+
+.profile__thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  box-sizing: boder-box;
+  box-shadow: 0 5px 15px -5px #000;
+}
+
+.profile__experience {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: dashed #025464 3px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: boder-box;
+  box-shadow: 0 5px 15px -5px #000;
+}
+
+.profile__experience span {
+  display: block;
+  color: #000;
+  font-size: 22px;
+}
+
+.profile__experience span:first-child {
+  color: #025464;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.profile__content .section__heading h2 {
+  font-size: 42px;
+}
+
+.profile__content .section__heading h2 span {
+  display: block;
+}
+
+.profile__tab-panel .tab-title ul {
+  border-bottom: #333 solid 2px;
+}
+
+.profile__tab-panel .tab-title ul li {
+  display: inline-block;
+  width: 33.33%;
+}
+
+.profile__tab-panel .tab-title ul li button {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #000;
+  padding: 15px;
+  font-size: 17px;
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+}
+
+.profile__tab-panel .tab-title ul li button.active,
+.profile__tab-panel .tab-title ul li button:hover {
+  background-image: linear-gradient(to left bottom, #e0857b, #e68d76, #ea9571, #ec9e6d, #eca869);
+  color: #fff;
+}
+
+.profile__tab-panel .tab-content div {
+  display: none;
+}
+
+.profile__tab-panel .tab-content div.active {
+  display: block;
+}
+
+.profile__tab-panel .tab-content div.skills__range {
+  display: block;
+}
+
+.profile__tab-panel .tab-content ul li {
+  margin-top: 15px;
+  list-style: none;
+}
+
+.profile__tab-panel .tab-content span {
+  display: block;
+  color: #666;
+  font-size: 18px;
+}
+
+.profile__tab-panel .tab-content label {
+  display: block;
+  font-size: 20px;
+  color: #000;
+}
+
+.skills__range {
+  padding: 15px 0;
+  border-bottom: #ccc solid 2px;
+}
+
+.skills__range h4 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.skills__range h4 .skills__range-percentage {
+  display: inline;
+  float: right;
+  color: #000;
+}
+
+.skills__range .skills__range-bar {
+  display: block;
+  height: 10px;
+  background: linear-gradient(to right top, #303a56, #2e4664, #2a5271, #225e7d, #176b87);
+  border-radius: 30px;
+}
+
+/* ==========Achivement Section========== */
+.achivement {
+  position: relative;
+  padding: 50px 0 40px;
+  background: url("../image/globle.jpg") no-repeat fixed center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.achivement:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #164b60;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.achivement ul li {
+  list-style: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.achivement ul li .number {
+  font-size: 48px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.achivement ul li .text span {
+  display: block;
+  font-size: 18px;
+}
+
+/* ==========Service Section========== */
+
+/* ==========My Portfolio Section========== */
 
 /* ==========Footer Section========== */
 .footer {

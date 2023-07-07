@@ -1,19 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Import Logo
-const logoUrl = process.env.PUBLIC_URL + "asset/image/name.png";
-
 const Header = () => {
+  // Import Logo
+  const logoUrl = process.env.PUBLIC_URL + "asset/image/name.png";
+
   return (
     <header className="header">
       <div className="container">
-        <div className="col-sm-3">
-          <img src={logoUrl} alt="Logo" />
+        <div className="col-sm-2">
+          <div className="header__logo">
+            <img src={logoUrl} alt="Logo" />
+          </div>
         </div>
 
-        <div className="col-sm-9">
-          <nav>
+        <div className="col-sm-10">
+          <nav className="header__nav">
             <ul>
               <li>
                 <Link to="/">Home</Link>

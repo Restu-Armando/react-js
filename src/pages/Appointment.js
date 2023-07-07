@@ -10,4 +10,4 @@ const AppointmentPage = () => {
   );
 };
 
-export default "AppointmentPage";
+export default AppointmentPage;

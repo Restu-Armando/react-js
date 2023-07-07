@@ -10,4 +10,4 @@ const MyResumePage = () => {
   );
 };
 
-export default "MyResumePage";
+export default MyResumePage;

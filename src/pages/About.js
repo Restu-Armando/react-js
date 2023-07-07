@@ -10,4 +10,4 @@ const AboutMePage = () => {
   );
 };
 
-export default "AboutMePage";
+export default AboutMePage;
